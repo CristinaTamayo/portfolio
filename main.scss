@@ -1,0 +1,111 @@
+// Variable overrides first
+// $primary: #405CA6;
+$primary: #405CA6;
+$secondary: #A68CED;
+$info: #4DC4CF;
+
+$font-sans-serif: "Inter", sans-serif;
+$body-font-family: "Inter", sans-serif;
+$headings-font-family: "Raleway" sans-serif;
+
+$border-radius-lg: 999em;
+// $badge-font-weight: 300 !important;
+
+// Then import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Declare your own style
+
+:root {
+    --bs-body-font-family: 'Inter', sans-serif;
+  }
+
+:root .navbar-dark, .navbar[data-bs-theme=dark] {
+  --bs-navbar-color: rgba(255, 255, 255, 0.9);
+  --bs-navbar-hover-color: rgba(255, 255, 255, 0.95);
+}
+
+:root .dropdown-menu {
+  --bs-dropdown-bg: #405CA6;
+}
+
+
+
+h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+}
+
+  .gradient-background {
+    /* background: linear-gradient(300deg, #211E3F, #2B2D5B, #E37B3D); //#1F6DC7 */
+    background-image: linear-gradient(to right, #405ca6, #5365b4, #666ec1, #7977cf, #8c80dc, #838be7, #7a96f1, #70a1f9, #2cbfdf, #4dc4cf);;
+    background-size: 180% 180%;
+    animation: gradient-animation 22s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .background-gray-dots {
+    // background-image: url("./images/css-pattern.png");
+    background-color: #F9F9F9;
+    // opacity: 0.3;
+    background-image:  radial-gradient(#aebad9 0.75px, transparent 0.75px), radial-gradient(#aebad9 0.75px, #F9F9F9 0.75px);
+    background-size: 30px 30px;
+    background-position: 0 0,15px 15px;
+  }
+  
+  .icon::before {
+    font-family:'Bootstrap-icons';
+    padding-right: .3em;
+  }
+
+
+  // NAV BAR
+  
+  .nav-link {
+    color: #rgba(255, 255, 255);
+  }
+
+  .nav-link:hover {
+    color: #fff;
+  }
+
+  .nav-link:active {
+    color: #fff;
+  }
+
+  .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    text-decoration: underline;
+  }
+  
+  // :root .badge {
+  //   --bs-badge-font-weight: normal;
+  // }
+
+ .badge {
+  font-weight: 500;
+ }
+    
+
+
+//declare variables
+// $myownVariable : purple;
+
+// .btn-primary{
+//     background-color: $myownVariable;
+//     border-color: $myownVariable;
+// }
+// .box{
+//     .btn-primary{
+//         color: $myownVariable;
+//     }
+// }
